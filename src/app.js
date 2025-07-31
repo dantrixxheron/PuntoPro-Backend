@@ -2,7 +2,6 @@ import 'dotenv/config'; // Ensure environment variables are loaded
 import express from 'express';
 import cors from 'cors';
 import categoriesRoutes from './routes/categories.routes.js';
-import productsRoutes from './routes/products.routes.js';
 
 const app = express();
 
@@ -13,6 +12,5 @@ app.use('/categories',categoriesRoutes);
 app.get('/', (req, res) => {
     res.send('Welcome to the PuntoPro API');
 });
-app.use('/products',productsRoutes);
 
 export default app;
